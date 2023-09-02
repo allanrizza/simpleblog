@@ -2,7 +2,6 @@ package com.simpleblog.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.lang.NonNull;
 
 import java.time.LocalDateTime;
 
@@ -19,11 +18,9 @@ public class Post {
     private String title;
 
     @Column(name = "body", nullable = false)
-    @NonNull
     private String body;
 
     @Column(name = "createdAt", nullable = false)
-    @NonNull
     private LocalDateTime createdAt;
 
     @Column(name = "updatedAt")
