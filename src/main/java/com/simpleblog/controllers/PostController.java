@@ -1,0 +1,31 @@
+package com.simpleblog.controllers;
+
+import com.simpleblog.entities.Post;
+import com.simpleblog.services.PostService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping(path = "post")
+public class PostController {
+    PostService postService;
+    public PostController(@Autowired PostService postService) {
+        this.postService = postService;
+    }
+
+    @GetMapping(path = "findAll")
+    public List<Post> findAll() {
+        return postService.findAll();
+    }
+
+    @GetMapping(path = "findById")
+    public Optional<Post> findById(@RequestParam Long id) {
+        return postService.findById(id);
+    }
+}
