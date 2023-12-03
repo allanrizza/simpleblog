@@ -1,7 +1,5 @@
-package com.simpleblog.controllers;
+package com.simpleblog.post;
 
-import com.simpleblog.entities.Post;
-import com.simpleblog.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

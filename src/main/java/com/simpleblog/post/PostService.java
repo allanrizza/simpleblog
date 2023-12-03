@@ -1,7 +1,5 @@
-package com.simpleblog.services;
+package com.simpleblog.post;
 
-import com.simpleblog.entities.Post;
-import com.simpleblog.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

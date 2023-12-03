@@ -1,4 +1,4 @@
-package com.simpleblog.entities;
+package com.simpleblog.post;
 
 import jakarta.persistence.*;
 import lombok.Data;

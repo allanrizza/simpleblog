@@ -1,6 +1,5 @@
-package com.simpleblog.repositories;
+package com.simpleblog.post;
 
-import com.simpleblog.entities.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
