@@ -13,11 +13,11 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public Optional<Post> findById(Long id) {
+    public Optional<PostEntity> findById(Long id) {
         return postRepository.findById(id);
     }
 
-    public List<Post> findAll() {
+    public List<PostEntity> findAll() {
         return postRepository.findAll();
     }
 

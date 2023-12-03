@@ -18,12 +18,12 @@ public class PostController {
     }
 
     @GetMapping(path = "findAll")
-    public List<Post> findAll() {
+    public List<PostEntity> findAll() {
         return postService.findAll();
     }
 
     @GetMapping(path = "findById")
-    public Optional<Post> findById(@RequestParam Long id) {
+    public Optional<PostEntity> findById(@RequestParam Long id) {
         return postService.findById(id);
     }
 }
