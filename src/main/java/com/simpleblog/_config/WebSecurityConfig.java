@@ -1,4 +1,4 @@
-package com.simpleblog.config;
+package com.simpleblog._config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
