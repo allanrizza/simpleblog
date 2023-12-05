@@ -18,7 +18,6 @@ public class CommentEntity {
     private Long id;
 
     @ManyToOne
-    @JsonBackReference
     @JoinColumn(name = "postId")
     private PostEntity post;
 

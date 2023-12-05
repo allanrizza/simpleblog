@@ -29,8 +29,4 @@ public class PostEntity {
 
     @Column(name = "updatedAt")
     private LocalDateTime updatedAt;
-
-    @JsonManagedReference
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "post")
-    private List<CommentEntity> comments;
 }
