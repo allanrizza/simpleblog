@@ -2,7 +2,6 @@ package com.simpleblog.comment;
 
 import java.time.LocalDateTime;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.simpleblog.post.PostEntity;
 
 import jakarta.persistence.*;
