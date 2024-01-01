@@ -31,6 +31,6 @@ public class UserEntity {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role", nullable = false)
     private RoleEntity role;
 }
