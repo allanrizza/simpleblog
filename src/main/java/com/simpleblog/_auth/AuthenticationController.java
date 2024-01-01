@@ -29,14 +29,14 @@ public class AuthenticationController {
     }
 
     @PostMapping("login")
-    public ResponseEntity login(@RequestBody AuthenticationDTO data) {
+    public ResponseEntity<?> login(@RequestBody AuthenticationDTO data) {
         var usernamePassword = new UsernamePasswordAuthenticationToken(data.username(), data.password());
         var auth = this.authenticationManager.authenticate(usernamePassword);
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("register")
-    public ResponseEntity register(@RequestBody RegisterDTO data) {
+    public ResponseEntity<?> register(@RequestBody RegisterDTO data) {
         if(this.userRepository.findByUsername(data.username()) != null) return ResponseEntity.badRequest().build();
         if(this.userRepository.findByEmail(data.email()) != null) return ResponseEntity.badRequest().build();
 
