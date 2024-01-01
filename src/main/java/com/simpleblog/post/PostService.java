@@ -3,6 +3,8 @@ package com.simpleblog.post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.simpleblog.post.exception.PostNotFoundException;
+
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +20,7 @@ public class PostService {
         Optional<PostEntity> post = postRepository.findById(id);
 
         if(!post.isPresent())
-            throw new RuntimeException("Post with id " + id + " does not exist.");
+            throw new PostNotFoundException(id);
         
         return post.get();
     }
