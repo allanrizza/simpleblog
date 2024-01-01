@@ -14,8 +14,13 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public Optional<PostEntity> findById(Long id) {
-        return postRepository.findById(id);
+    public PostEntity findById(Long id) {
+        Optional<PostEntity> post = postRepository.findById(id);
+
+        if(!post.isPresent())
+            throw new RuntimeException("Post with id " + id + " does not exist.");
+        
+        return post.get();
     }
 
     public List<PostEntity> findAll() {

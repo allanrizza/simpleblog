@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "post")
@@ -27,8 +26,8 @@ public class PostController {
     }
 
     @GetMapping(path = "findById")
-    public Optional<PostEntity> findById(@RequestParam Long id) {
-        return postService.findById(id);
+    public ResponseEntity<PostEntity> findById(@RequestParam Long id) {
+        return new ResponseEntity<PostEntity>(postService.findById(id), HttpStatus.OK);
     }
 
     @PostMapping
